@@ -1,0 +1,37 @@
+.logo__item {
+  font-family: $EnFontFamily;
+}
+.nav-link {
+  transition: $transitionAllTime;
+  display: flex;
+  align-items: center;
+  &:hover {
+    color: $mainOrange !important;
+  }
+}
+.nav__items {
+  margin: 0 30px 0 auto;
+}
+.nav__items-2 {
+  margin: 0 0 0 20px;
+}
+.nav-link.active {
+  color: $mainOrange !important;
+}
+.dn__icon {
+  font-size: 15px;
+  .moon {
+    color: $mainBlue !important;
+  }
+  .sun {
+    color: $mainOrange !important;
+  }
+}
+.vertical__line__seperator {
+  min-width: 0px;
+  margin: auto 5px;
+  box-sizing: border-box;
+  width: 1px;
+  height: 16px;
+  background-color: rgb(183, 189, 198);
+}

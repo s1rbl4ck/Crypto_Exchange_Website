@@ -1,0 +1,38 @@
+.footer__box {
+  padding: 3rem 0 0 0;
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .items {
+    .heading {
+      text-align: right;
+    }
+    .item {
+      ul {
+        list-style: none;
+        padding: 0;
+        li {
+          line-height: 2.3rem;
+          a {
+            &:hover {
+              color: $mainOrange !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  .bottom {
+    text-align: center;
+    padding: 0.7rem;
+    letter-spacing: 2px;
+    a {
+      color: $mainBlue !important;
+      transition: $transitionAllTime;
+      &:hover {
+        color: $mainOrange !important;
+      }
+    }
+  }
+}

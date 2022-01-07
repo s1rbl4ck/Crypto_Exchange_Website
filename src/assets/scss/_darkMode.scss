@@ -1,0 +1,85 @@
+// DarkMode
+.night {
+  background-color: $mainDark;
+  .header, .join__box {
+    background-color: $mainLowDark !important;
+  }
+  a,
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $mainLight !important;
+  }
+  .FirstDayNight {
+    color: $mainLightInDarkFirst !important;
+  }
+  .SecondDayNight {
+    color: $mainLightInDarkSecond !important;
+  }
+  .HighlightBackground {
+    background-color: $backgroundHighliterInDark;
+    transition: $transitionAllTime;
+    &:hover {
+      background-color: $mainLowDark;
+      p,
+      h5,
+      h4,
+      h3,
+      h2,
+      h1,
+      svg {
+        color: $mainLowLight !important;
+      }
+    }
+  }
+  .HighlightBackgroundHover:hover {
+    background-color: $backgroundHighliterInDark;
+  }
+}
+// LightMode
+.day {
+  background-color: $mainLight;
+  .header, .join__box {
+    background-color: $mainLowLight;
+  }
+  a,
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .nav-link {
+    color: $mainDark !important;
+  }
+  .FirstDayNight {
+    color: $mainDarkInLightFirst !important;
+  }
+  .SecondDayNight {
+    color: $mainDarkInLightSecond !important;
+  }
+  .HighlightBackground {
+    background-color: $backgroundHighliterInLight;
+    transition: $transitionAllTime;
+    &:hover {
+      background-color: $mainDark;
+      p,
+      h5,
+      h4,
+      h3,
+      h2,
+      h1,
+      svg {
+        color: $mainLowLight !important;
+      }
+    }
+  }
+  .HighlightBackgroundHover:hover {
+    background-color: $backgroundHighliterInLight;
+  }
+}

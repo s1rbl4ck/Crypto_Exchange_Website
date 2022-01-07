@@ -1,0 +1,44 @@
+// Fonts
+@import "fonts.scss";
+// Variables
+@import "variables.scss";
+// Buttons
+@import "buttons.scss";
+// DarkMode
+@import "darkMode.scss";
+// Header
+@import "header.scss";
+// Navbar
+@import "navbar.scss";
+// Content
+@import "content.scss";
+// Footer
+@import "footer.scss";
+
+html {
+  body {
+    direction: rtl;
+    font-family: $FaFontFamily;
+  }
+}
+a {
+  text-decoration: none !important;
+}
+
+main {
+  transition: 0.4s;
+}
+
+/* scroll bar */
+::-webkit-scrollbar {
+  width: .5rem;
+}
+::-webkit-scrollbar-track {
+  background: $mainLight;
+}
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(167, 167, 167);
+}

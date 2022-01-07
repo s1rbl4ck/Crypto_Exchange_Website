@@ -1,0 +1,13 @@
+@mixin mainButton($maxWidth: 130px, $maxHeight: 30px, $backgroundColor: $mainOrange, $backgroundColorHover: $mainOrangeSecond) {
+  min-width: $maxWidth;
+  min-height: $maxHeight;
+  background-color: $backgroundColor;
+  color: $mainDarkBlue;
+  border-radius: 6px;
+  border: none;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px !important;
+  transition: $transitionAllTime;
+  &:hover {
+    background-color: $backgroundColorHover;
+  }
+}

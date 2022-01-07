@@ -1,0 +1,52 @@
+.header {
+  box-sizing: border-box;
+  transition: $transitionAllTime;
+  .contents {
+    padding: 80px 0 0 0;
+    .content__1 {
+      padding: 0 0 80px 0;
+      .content__title {
+        font-size: 38px;
+        color: $mainDark;
+      }
+      .content__text {
+        font-size: 16px;
+        font-weight: 400;
+        margin-top: 16px;
+      }
+      .content__button {
+        margin-top: 16px;
+        button {
+          @include mainButton(210px, 43px);
+        }
+      }
+    }
+    .content__2 {
+      padding: 0 0 15px 0;
+      .coin__item {
+        padding: 0 30px 0 0;
+        text-align: right;
+        .coin__title {
+          font-weight: 600;
+          font-size: 19px;
+        }
+        .coin__price {
+          font-size: 24px;
+          font-weight: 500;
+          span {
+            letter-spacing: 1px;
+          }
+        }
+        .coin__percent {
+          &.green {
+            color: $mainGreen;
+          }
+          &.red {
+            color: $mainRed;
+          }
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
