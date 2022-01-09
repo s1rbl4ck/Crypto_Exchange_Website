@@ -1,9 +1,11 @@
 # Crypto Currency exchange website created with react.js & redux
 
 
-```+ Cool User Interface in green```
-```+ Dark Mode & Light Mode in green```
-```+ MultiLanguage in green (Coming Soon...) in orange```
+```diff
++ Cool User Interface in green
++ Dark Mode & Light Mode in green
++ MultiLanguage in green (Coming Soon...) in orange
+```
 ## Project Demo
 
 ![Demo](https://user-images.githubusercontent.com/51126010/148682771-f43b13a9-62f5-4143-ae12-67edbc243e44.gif)
