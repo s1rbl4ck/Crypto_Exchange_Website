@@ -19,6 +19,7 @@ html {
   body {
     direction: rtl;
     font-family: $FaFontFamily;
+    overflow-x: hidden;
   }
 }
 a {
@@ -31,7 +32,7 @@ main {
 
 /* scroll bar */
 ::-webkit-scrollbar {
-  width: .5rem;
+  width: 0.5rem;
 }
 ::-webkit-scrollbar-track {
   background: $mainLight;

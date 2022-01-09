@@ -1,6 +1,6 @@
 // Cookie Helper [setCookie, getCookie]
 const Cookie = {
-  setCookie(name, value, days) {
+  setCookie(name, value, days = 364) {
     var expires = "";
     if (days) {
       var date = new Date();

@@ -1,18 +1,25 @@
 import React, { useContext, useState } from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import MainContext from "../../context/main";
 import { NavLink } from "react-router-dom";
 import Cookie from "../../helpers/cookie";
+import { useSelector, useDispatch } from "react-redux";
+import { changeLang } from "../../actions";
+import { changeTheme } from "../../actions";
 
 export default function Header() {
-  const [darkMode, setDarkMode] = useState(Cookie.getCookie("darkMode"));
-  const mainContext = useContext(MainContext);
+  const darkMode = useSelector((state) => state.themeMode),
+    lang = useSelector((state) => state.lang),
+    dispatch = useDispatch();
 
-  let setMode = () => {
-    Cookie.setCookie("darkMode", !Cookie.getCookie("darkMode"), 7);
-    setDarkMode(Cookie.getCookie("darkMode"));
-    mainContext.dispatch({ type: "nightMode", payload: !darkMode });
+  let setLang = () => {
+    // console.log(lang);
+    lang == "fa" ? dispatch(changeLang("en")) : dispatch(changeLang("fa"));
+  };
+
+  let setdarkMode = () => {
+    dispatch(changeTheme(!darkMode));
+    Cookie.setCookie("darkMode", !darkMode);
   };
 
   return (
@@ -51,7 +58,11 @@ export default function Header() {
               ثبت نام
             </NavLink>
             <i className="vertical__line__seperator"></i>
-            <Nav.Link className="dn__icon" onClick={setMode}>
+            <Nav.Link className="nav-link lang" onClick={() => setLang()}>
+              EN
+            </Nav.Link>
+            <i className="vertical__line__seperator"></i>
+            <Nav.Link className="dn__icon" onClick={() => setdarkMode(!darkMode)}>
               {!darkMode ? <FontAwesomeIcon className="moon" icon="moon" /> : <FontAwesomeIcon className="sun" icon="sun" />}
             </Nav.Link>
           </Nav>

@@ -115,7 +115,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="bottom FirstDayNight">
-          copyright by <a href="https://instagram.com/dmhs82">s1rbl4ck</a> ©{new Date().getFullYear()}
+          Developed by <a href="https://instagram.com/dmhs82">s1rbl4ck</a> ©{new Date().getFullYear()}
         </div>
       </div>
     </footer>

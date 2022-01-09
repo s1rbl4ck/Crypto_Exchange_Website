@@ -8,6 +8,10 @@
   &:hover {
     color: $mainOrange !important;
   }
+  &.lang {
+    font-size: 15px;
+    line-height: 100%;
+  }
 }
 .nav__items {
   margin: 0 30px 0 auto;

@@ -1,4 +1,4 @@
-import React, { useReducer } from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 // Helpers
 import Cookie from "./helpers/cookie";
@@ -10,27 +10,22 @@ import Routes from "./routes/routes";
 // MainCSS & Icons
 import "./assets/scss/app.scss";
 import "./assets/js/fontawesome";
-// Context
-import MainContext from "./context/main";
+// Redux
+import { useSelector } from "react-redux";
 // Reducer
-import AppReducer from "./Reducers/appReducer";
 import Footer from "./components/layouts/footer";
 
-
 function App() {
-  const [state, dispatch] = useReducer(AppReducer, {
-    nightMode: Cookie.getCookie("darkMode"),
-  });
+  const theme = useSelector((state) => state.themeMode);
+  const lang = useSelector((state) => state.lang);
 
   return (
     <Router>
-      <MainContext.Provider value={{ nightMode: state.nightMode, dispatch }}>
-        <main className={state.nightMode ? "night" : "day"}>
-          <Header />
-          <Routes />
-          <Footer />
-        </main>
-      </MainContext.Provider>
+      <main className={theme ? "night" : "day"}>
+        <Header />
+        <Routes />
+        <Footer />
+      </main>
     </Router>
   );
 }
