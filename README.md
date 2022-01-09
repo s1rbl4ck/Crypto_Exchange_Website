@@ -4,11 +4,12 @@
 ```
 + Cool User Interface
 + Dark Mode & Light Mode
-+ MultiLanguage in green (Coming Soon...)
++ MultiLanguage (English & Persian[Farsi])
++ Responsive Design -> Adding Soon...
 ```
 ## Project Demo
 
-![Demo](https://user-images.githubusercontent.com/51126010/148682771-f43b13a9-62f5-4143-ae12-67edbc243e44.gif)
+![Demo](https://user-images.githubusercontent.com/51126010/148700573-0abed586-4355-4796-892f-5df2f43e33e4.gif)
 
 ## Usage
 
