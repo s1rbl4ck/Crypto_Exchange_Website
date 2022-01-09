@@ -6,7 +6,7 @@
 
 ## Project Demo
 
-![](https://user-images.githubusercontent.com/51126010/148681590-d148b103-0051-4522-9ea2-2a712cc9528e.mp4)
+![Demo](https://user-images.githubusercontent.com/51126010/148682771-f43b13a9-62f5-4143-ae12-67edbc243e44.gif)
 
 ## Usage
 
