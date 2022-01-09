@@ -1,7 +1,5 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
-// Helpers
-import Cookie from "./helpers/cookie";
 // Custome css
 import "bootstrap/dist/css/bootstrap.css";
 // Components
@@ -21,7 +19,7 @@ function App() {
 
   return (
     <Router>
-      <main className={theme ? "night" : "day"}>
+      <main className={theme ? "night" : "day"} dir={lang === "fa" ? "rtl" : "ltr"}>
         <Header />
         <Routes />
         <Footer />

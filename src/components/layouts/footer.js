@@ -1,113 +1,115 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
   return (
     <footer>
       <div className="footer__box">
         <div className="container">
           <div className="items">
-            <h5 className="heading">درباره</h5>
+            <h5 className="heading">{t("about")}</h5>
             <div className="item">
               <ul>
                 <li>
                   <a className="SecondDayNight" href="/">
-                    درباره ما
+                    {t("aboutus")}
                   </a>
                 </li>
                 <li>
                   <a className="SecondDayNight" href="/">
-                    قوانین
+                    {t("rules")}
                   </a>
                 </li>
                 <li>
                   <a className="SecondDayNight" href="/">
-                    حریم خصوصی
+                    {t("privacy")}
                   </a>
                 </li>
                 <li>
                   <a className="SecondDayNight" href="/">
-                    اخبار
+                    {t("news")}
                   </a>
                 </li>
               </ul>
             </div>
           </div>
           <div className="items">
-            <h5 className="heading">سرویس ها</h5>
+            <h5 className="heading">{t('services')}</h5>
             <div className="item">
               <ul>
                 <li>
                   <a className="SecondDayNight" href="/">
-                    ترید
+                    {t('trade')}
                   </a>
                 </li>
                 <li>
                   <a className="SecondDayNight" href="/">
-                    معامله P2P
+                    {t('p2p.exchange')}
                   </a>
                 </li>
                 <li>
                   <a className="SecondDayNight" href="/">
-                    خرید مستقیم
+                    {t("buy.from.market")}
                   </a>
                 </li>
                 <li>
                   <a className="SecondDayNight" href="/">
-                    دریافت وام
+                    {t("loan")}
                   </a>
                 </li>
               </ul>
             </div>
           </div>
           <div className="items">
-            <h5 className="heading">مقاله ها</h5>
+            <h5 className="heading">{t("articles")}</h5>
             <div className="item">
               <ul>
                 <li>
                   <a className="SecondDayNight" href="/">
-                    نحوه خرید مستقیم
+                    {t("article.buy.from.market")}
                   </a>
                 </li>
                 <li>
                   <a className="SecondDayNight" href="/">
-                    بیت کوین چیست؟
+                    {t("article.bitcoin")}
                   </a>
                 </li>
                 <li>
                   <a className="SecondDayNight" href="/">
-                    چگونه ترید کنیم؟
+                    {t("article.trade")}
                   </a>
                 </li>
                 <li>
                   <a className="SecondDayNight" href="/">
-                    بهترین ارز ها کدامند؟
+                    {t("article.currencies")}
                   </a>
                 </li>
               </ul>
             </div>
           </div>
           <div className="items">
-            <h5 className="heading">راه های ارتباطی</h5>
+            <h5 className="heading">{t("social.medias")}</h5>
             <div className="item">
               <ul>
                 <li>
                   <a className="SecondDayNight" href="/">
-                    تلگرام
+                    {t("telegram")}
                   </a>
                 </li>
                 <li>
                   <a className="SecondDayNight" href="/">
-                    اینستاگرام
+                    {t("instagram")}
                   </a>
                 </li>
                 <li>
                   <a className="SecondDayNight" href="/">
-                    دیسکورد
+                    {t("discord")}
                   </a>
                 </li>
                 <li>
                   <a className="SecondDayNight" href="/">
-                    گیت هاب
+                    {t("github")}
                   </a>
                 </li>
               </ul>

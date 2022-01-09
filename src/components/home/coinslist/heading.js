@@ -1,10 +1,10 @@
-const CoinHeading = () => {
+const CoinHeading = (props) => {
   return (
     <div className="heading">
-      <div className="head__title SecondDayNight">نام ارز</div>
-      <div className="head__title SecondDayNight">قیمت</div>
-      <div className="head__title SecondDayNight">تغییرات</div>
-      <div className="head__title SecondDayNight">ارزش ارز</div>
+      <div className="head__title SecondDayNight">{props.titleName}</div>
+      <div className="head__title SecondDayNight">{props.titlePrice}</div>
+      <div className="head__title SecondDayNight">{props.titleChanges}</div>
+      <div className="head__title SecondDayNight">{props.titleValue}</div>
     </div>
   );
 };

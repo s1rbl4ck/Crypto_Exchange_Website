@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NavLink } from "react-router-dom";
@@ -6,15 +6,17 @@ import Cookie from "../../helpers/cookie";
 import { useSelector, useDispatch } from "react-redux";
 import { changeLang } from "../../actions";
 import { changeTheme } from "../../actions";
+import { useTranslation } from "react-i18next";
 
 export default function Header() {
   const darkMode = useSelector((state) => state.themeMode),
     lang = useSelector((state) => state.lang),
     dispatch = useDispatch();
 
+  const { t } = useTranslation();
+
   let setLang = () => {
-    // console.log(lang);
-    lang == "fa" ? dispatch(changeLang("en")) : dispatch(changeLang("fa"));
+    lang === "fa" ? dispatch(changeLang("en")) : dispatch(changeLang("fa"));
   };
 
   let setdarkMode = () => {
@@ -31,35 +33,35 @@ export default function Header() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="nav__items">
             <NavLink className="nav-link" exact to="/">
-              خانه
+              {t("home")}
             </NavLink>
             <NavLink className="nav-link" to="/trade">
-              ترید
+              {t("trade")}
             </NavLink>
             <NavLink className="nav-link" to="/price">
-              قیمت
+              {t("price")}
             </NavLink>
             <NavLink className="nav-link" to="/faq">
-              سوالات متداول
+              {t("faq")}
             </NavLink>
             <NavLink className="nav-link" to="/about">
-              درباره
+              {t("about")}
             </NavLink>
             <NavLink className="nav-link" to="/contact">
-              تماس
+              {t("contact")}
             </NavLink>
           </Nav>
           <Nav className="nav__items-2">
             <NavLink className="nav-link" to="/login">
-              ورود
+              {t("login")}
             </NavLink>
             <i className="vertical__line__seperator"></i>
             <NavLink className="nav-link" to="/register">
-              ثبت نام
+              {t("register")}
             </NavLink>
             <i className="vertical__line__seperator"></i>
             <Nav.Link className="nav-link lang" onClick={() => setLang()}>
-              EN
+              {lang === "fa" ? "EN" : "FA"}
             </Nav.Link>
             <i className="vertical__line__seperator"></i>
             <Nav.Link className="dn__icon" onClick={() => setdarkMode(!darkMode)}>

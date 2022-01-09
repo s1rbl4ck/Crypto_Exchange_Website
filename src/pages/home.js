@@ -12,6 +12,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import SupportItem from "../components/home/support";
+// Translation
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
   const settings = {
@@ -26,16 +28,19 @@ const Home = () => {
     cssEase: "linear",
     rtl: true,
   };
+
+  const { t } = useTranslation();
+
   return (
     <>
       <div className="header">
         <div className="container">
           <div className="contents">
             <div className="content__1">
-              <h1 className="content__title FirstDayNight">خرید و فروش ارز دیجیتال امن و مستقیم</h1>
-              <h2 className="content__text SecondDayNight">دنیای ارزدیجیتال نیاز به سیستم های امن و ساده و شیک برای معامله دارد.</h2>
+              <h1 className="content__title FirstDayNight">{t("header.title")}</h1>
+              <h2 className="content__text SecondDayNight">{t("header.text")}</h2>
               <div className="content__button">
-                <Button variant="warning">ثبت نام کنید</Button>
+                <Button variant="warning">{t("registerNow")}</Button>
               </div>
             </div>
             <div className="content__2">
@@ -57,8 +62,8 @@ const Home = () => {
       <div className="content">
         <div className="container">
           <div className="coins__list">
-            <h3 className="heading__text">لیست ارز ها</h3>
-            <CoinHeading />
+            <h3 className="heading__text">{t("list.heading")}</h3>
+            <CoinHeading titleName={t("title.currencyName")} titlePrice={t("price")} titleChanges={t("title.currencyChanges")} titleValue={t("title.currencyValue")} />
             <div className="coin__items">
               <CoinItem />
               <CoinItem />
@@ -69,16 +74,16 @@ const Home = () => {
           </div>
 
           <div className="app__content">
-            <h3 className="app__title">در هر کجا و هر مکان ترید کنید</h3>
+            <h3 className="app__title">{t("app.heading")}</h3>
             <div className="app__box">
               <div className="app__pic">
                 <img src="./img/svg/phone.svg" alt="" />
               </div>
               <div className="download__box">
-                <AppItem href="app/android" icon={faGooglePlay} title="پلی استور" />
-                <AppItem href="app/ios" icon={faAppStore} title="اپ استور" />
-                <AppItem href="app/direct" icon={faDownload} title="دانلود مستقیم" />
-                <AppItem href="#barcode" icon={faQrcode} title="اسکن کد">
+                <AppItem href="app/android" icon={faGooglePlay} title={t("app.googleplay")} />
+                <AppItem href="app/ios" icon={faAppStore} title={t("app.appstore")} />
+                <AppItem href="app/direct" icon={faDownload} title={t("app.directdownload")} />
+                <AppItem href="#barcode" icon={faQrcode} title={t("app.qrcode")}>
                   <div className="barcode__box">
                     <img src="/img/qr.png" alt="barcode app downloader" />
                   </div>
@@ -88,19 +93,19 @@ const Home = () => {
           </div>
 
           <div className="support__box">
-            <SupportItem href="/support" src="./img/support/24hour.svg" title="پشتیبانی 24/7" desc="در صورت بروز هرگونه مشکل بدون درنگ با پشتیبانی تماس بگیرید." />
-            <SupportItem href="/faq" src="./img/support/blog.svg" title="وبلاگ اکسچنج" desc="با وبلاگ اکسچنج فن های ترید و درامد از ارز های دیجیتال یاد بگیرید." />
-            <SupportItem href="/profile/security" src="./img/support/security.svg" title="امنیت حساب شما" desc="امنیت حساب خود را به ما بسپارید با متد های امنیتی بروز." />
-            <SupportItem href="/exchange" src="./img/support/exchange.svg" title="تبدیل درامد دلاری سریع" desc="ارز های خود را سریع به تومان تبدیل و حتی با کاربران معامله کنید." />
+            <SupportItem href="/support" src="./img/support/24hour.svg" title={t("support.title.24")} desc={t("support.text.24")} />
+            <SupportItem href="/faq" src="./img/support/blog.svg" title={t("support.title.blog")} desc={t("support.text.blog")} />
+            <SupportItem href="/profile/security" src="./img/support/security.svg" title={t("support.title.security")} desc={t("support.text.security")} />
+            <SupportItem href="/exchange" src="./img/support/exchange.svg" title={t("support.title.exchange")} desc={t("support.text.exchange")} />
           </div>
         </div>
 
         <div className="join__box">
           <div className="container">
-            <h4>ترید را همین حالا شروع کنید</h4>
+            <h4>{t("join.heading")}</h4>
             <div className="buttons">
-              <Button variant="warning">ثبت نام</Button>
-              <Button variant="warning">شروع ترید</Button>
+              <Button variant="warning">{t("register")}</Button>
+              <Button variant="warning">{t("start.trade.text")}</Button>
             </div>
           </div>
         </div>
