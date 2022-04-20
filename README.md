@@ -11,6 +11,8 @@
 
 ![Demo](https://user-images.githubusercontent.com/51126010/148700573-0abed586-4355-4796-892f-5df2f43e33e4.gif)
 
+![Open Demo](https://cryptoexchanges1rbl4ck.netlify.app/)
+
 ## Usage
 
 In the project directory, run:
